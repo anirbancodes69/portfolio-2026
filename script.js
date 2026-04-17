@@ -7,7 +7,7 @@ const projectData = {
                     <div class="space-y-12">
                         <div class="h-80 rounded-[2rem] bg-gradient-to-br from-blue-600/20 to-purple-600/20 border border-white/10 flex items-center justify-center">
                             <div class="text-center">
-                                <p class="text-white/20 font-black text-6xl">BACKEND ARCHITECTURE</p>
+                                <p class="text-white/20 font-black text-6xl">BACKEND ARCH</p>
                             </div>
                         </div>
                         <div class="grid md:grid-cols-3 gap-12">
