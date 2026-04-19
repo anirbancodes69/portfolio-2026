@@ -3,256 +3,389 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anirban Bhowmick | Tech Lead • SaaS • AI Systems</title>
+    <title>Anirban Bhowmick | Senior Backend Engineer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        dark: '#050505',
+                        card: '#0A0A0A',
+                        accent: '#3b82f6',
+                    },
+                    animation: {
+                        'infinite-scroll': 'infinite-scroll 40s linear infinite',
+                        'fade-in': 'fadeIn 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        'infinite-scroll': {
+                            from: { transform: 'translateX(0)' },
+                            to: { transform: 'translateX(-50%)' },
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(10px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #050505; color: #e5e5e5; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.05); }
+        .glow-hover:hover { box-shadow: 0 0 20px rgba(59, 130, 246, 0.15); border-color: rgba(59, 130, 246, 0.3); }
+        .mask-fade { mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); }
+        .text-gradient { background: linear-gradient(to bottom right, #fff, #a1a1aa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #050505; }
+        ::-webkit-scrollbar-thumb { background: #222; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #333; }
+    </style>
 </head>
-<body class="selection:bg-white/20">
+<body class="antialiased selection:bg-accent/30">
 
-    <section class="relative min-h-screen flex flex-col justify-center items-center px-6 radial-gradient">
-        <div class="max-w-4xl text-center space-y-8 fade-in">
-            <span class="text-sm uppercase tracking-[0.3em] text-gray-500 font-semibold">Anirban • Bhowmick</span>
-            <h1 class="text-6xl md:text-8xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-500">
-                Building Scalable <br> SaaS with AI
-            </h1>
-            <p class="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
-                I design and build scalable backend systems using Laravel, AWS, and AI — focused on clean architecture, performance, and real-world production systems.
-            </p>
-            <div class="flex flex-col md:flex-row gap-4 justify-center items-center pt-4">
-                <a href="#projects" class="px-8 py-4 bg-white text-black font-semibold rounded-full hover:bg-gray-200 transition-all duration-300 hover:scale-105">View Projects</a>
-                <a href="#contact" class="px-8 py-4 glass rounded-full font-semibold hover:bg-white/10 transition-all duration-300">Let’s Work Together</a>
+    <nav class="fixed top-0 w-full z-50 glass border-b border-white/5 py-4">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <span class="font-bold tracking-tighter text-xl">AB<span class="text-accent">.</span></span>
+            <div class="hidden md:flex gap-8 text-sm font-medium text-gray-400">
+                <a href="#about" class="hover:text-white transition-colors">About</a>
+                <a href="#skills" class="hover:text-white transition-colors">Skills</a>
+                <a href="#projects" class="hover:text-white transition-colors">Projects</a>
+                <a href="#experience" class="hover:text-white transition-colors">Experience</a>
             </div>
-            <div class="pt-12 flex items-center justify-center gap-8 text-xs text-gray-500 uppercase tracking-widest">
-                <span>4+ years experience</span>
-                <span class="w-1 h-1 bg-gray-700 rounded-full"></span>
-                <span>Modern SaaS</span>
-                <span class="w-1 h-1 bg-gray-700 rounded-full"></span>
-                <span>AI-powered systems</span>
+            <a href="mailto:anirbancodes@gmail.com" class="px-5 py-2 rounded-full bg-white text-black text-sm font-semibold hover:bg-gray-200 transition-all">Contact</a>
+        </div>
+    </nav>
+
+    <header class="relative pt-40 pb-20 overflow-hidden">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full pointer-events-none">
+            <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-500/10 rounded-full blur-[120px]"></div>
+            <div class="absolute bottom-[20%] right-[-10%] w-[30%] h-[30%] bg-indigo-500/10 rounded-full blur-[120px]"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
+            <div class="animate-fade-in inline-flex items-center gap-2 px-3 py-1 rounded-full glass border-white/10 text-xs font-medium text-blue-400 mb-6">
+                <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                </span>
+                Available for Senior Roles
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-6 text-gradient">
+                Anirban Bhowmick
+            </h1>
+            <p class="text-xl md:text-2xl font-medium text-gray-300 mb-4">
+                Senior Software Engineer | Backend Systems Specialist
+            </p>
+            <p class="max-w-2xl mx-auto text-gray-400 text-lg leading-relaxed mb-10">
+                Building scalable, API-driven systems and enterprise integrations using Laravel, Docker, and Cloud platforms — focused on high performance and clean architecture.
+            </p>
+            
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#projects" class="px-8 py-4 rounded-xl bg-accent hover:bg-blue-600 font-semibold transition-all shadow-lg shadow-blue-500/20">View Projects</a>
+                <a href="#" class="px-8 py-4 rounded-xl glass hover:bg-white/5 font-semibold transition-all">Download Resume</a>
+            </div>
+        </div>
+
+        <div class="mt-24 border-y border-white/5 py-10 bg-white/[0.01]">
+            <div class="max-w-7xl mx-auto mask-fade overflow-hidden whitespace-nowrap group">
+                <div class="flex animate-infinite-scroll group-hover:[animation-play-state:paused] w-max">
+                    <div class="flex items-center gap-12 px-6 text-xl font-medium text-gray-500">
+                        <span>Laravel</span> • <span>PHP</span> • <span>REST APIs</span> • <span>MySQL</span> • <span>Redis</span> • <span>Docker</span> • <span>AWS</span> • <span>Azure</span> • <span>CI/CD</span> • <span>Distributed Systems</span>
+                    </div>
+                    <div class="flex items-center gap-12 px-6 text-xl font-medium text-gray-500">
+                        <span>Laravel</span> • <span>PHP</span> • <span>REST APIs</span> • <span>MySQL</span> • <span>Redis</span> • <span>Docker</span> • <span>AWS</span> • <span>Azure</span> • <span>CI/CD</span> • <span>Distributed Systems</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="py-24 max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-3xl font-bold mb-6">Designing for <span class="text-accent">Scale</span></h2>
+                <div class="space-y-4 text-gray-400 leading-relaxed">
+                    <p>Backend-focused Senior Software Engineer with 5+ years of experience building scalable, API-driven applications and enterprise integrations.</p>
+                    <p>I specialize in modernizing legacy systems, optimizing database performance, and designing reliable distributed workflows that stand up to high traffic and complex business logic.</p>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="p-6 glass rounded-2xl">
+                    <div class="text-3xl font-bold text-white mb-1">5+</div>
+                    <div class="text-xs uppercase tracking-widest text-gray-500">Years Exp.</div>
+                </div>
+                <div class="p-6 glass rounded-2xl">
+                    <div class="text-3xl font-bold text-white mb-1">40%</div>
+                    <div class="text-xs uppercase tracking-widest text-gray-500">Perf. Boost</div>
+                </div>
+                <div class="p-6 glass rounded-2xl">
+                    <div class="text-3xl font-bold text-white mb-1">20+</div>
+                    <div class="text-xs uppercase tracking-widest text-gray-500">Modernizations</div>
+                </div>
+                <div class="p-6 glass rounded-2xl">
+                    <div class="text-3xl font-bold text-white mb-1">100%</div>
+                    <div class="text-xs uppercase tracking-widest text-gray-500">Cloud Driven</div>
+                </div>
             </div>
         </div>
     </section>
 
-    <div class="py-12 border-y border-white/5 overflow-hidden relative group">
-        <div class="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-black to-transparent z-10"></div>
-        <div class="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-black to-transparent z-10"></div>
-        <div class="flex whitespace-nowrap animate-scroll">
-            <div class="flex gap-16 items-center px-8 text-gray-500 font-medium text-lg">
-                <span>Laravel</span><span>PHP</span><span>MySQL</span><span>PostgreSQL</span><span>Docker</span><span>Redis</span><span>Linux</span><span>React</span><span>JavaScript</span><span>HTML</span><span>Generative AI</span>
+    <section id="skills" class="py-24 bg-white/[0.01]">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center">Technical <span class="text-accent">Stack</span></h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="p-8 glass rounded-3xl">
+                    <h3 class="text-lg font-bold mb-6 text-white flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-blue-500"></span> Backend
+                    </h3>
+                    <ul class="space-y-3 text-gray-400">
+                        <li>PHP / Laravel</li>
+                        <li>REST API Design</li>
+                        <li>JWT & OAuth</li>
+                        <li>Redis Caching</li>
+                    </ul>
+                </div>
+                <div class="p-8 glass rounded-3xl">
+                    <h3 class="text-lg font-bold mb-6 text-white flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-purple-500"></span> Cloud & Ops
+                    </h3>
+                    <ul class="space-y-3 text-gray-400">
+                        <li>Docker / Containerization</li>
+                        <li>Azure Key Vault & ACR</li>
+                        <li>AWS EC2, S3, RDS</li>
+                        <li>GitHub Actions / CI/CD</li>
+                    </ul>
+                </div>
+                <div class="p-8 glass rounded-3xl">
+                    <h3 class="text-lg font-bold mb-6 text-white flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-green-500"></span> Data & Architecture
+                    </h3>
+                    <ul class="space-y-3 text-gray-400">
+                        <li>MySQL / PostgreSQL</li>
+                        <li>Distributed Systems</li>
+                        <li>Observability (Logging)</li>
+                        <li>System Design</li>
+                    </ul>
+                </div>
             </div>
-            <div class="flex gap-16 items-center px-8 text-gray-500 font-medium text-lg">
-                <span>Laravel</span><span>PHP</span><span>MySQL</span><span>PostgreSQL</span><span>Docker</span><span>Redis</span><span>Linux</span><span>React</span><span>JavaScript</span><span>HTML</span><span>Generative AI</span>
+        </div>
+    </section>
+
+    <section id="projects" class="py-24 max-w-7xl mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-12">Featured Engineering <span class="text-accent">Projects</span></h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div onclick="openModal('rag')" class="group cursor-pointer p-1 rounded-[2rem] glass glow-hover transition-all duration-500 overflow-hidden">
+                <div class="p-8">
+                    <div class="bg-blue-500/10 w-12 h-12 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 group-hover:text-accent transition-colors">AI RAG Chatbot</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">AI system using semantic search and vector embeddings to query large document datasets with low latency.</p>
+                    <div class="flex gap-2 flex-wrap">
+                        <span class="text-[10px] uppercase font-bold tracking-widest px-2 py-1 bg-white/5 rounded">Python</span>
+                        <span class="text-[10px] uppercase font-bold tracking-widest px-2 py-1 bg-white/5 rounded">Vector DB</span>
+                    </div>
+                </div>
             </div>
+            <div onclick="openModal('saas')" class="group cursor-pointer p-1 rounded-[2rem] glass glow-hover transition-all duration-500 overflow-hidden">
+                <div class="p-8">
+                    <div class="bg-purple-500/10 w-12 h-12 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 group-hover:text-accent transition-colors">Invoicing SaaS</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">Automated platform with real-time payment tracking and multi-currency support for enterprises.</p>
+                    <div class="flex gap-2 flex-wrap">
+                        <span class="text-[10px] uppercase font-bold tracking-widest px-2 py-1 bg-white/5 rounded">Laravel</span>
+                        <span class="text-[10px] uppercase font-bold tracking-widest px-2 py-1 bg-white/5 rounded">Stripe</span>
+                    </div>
+                </div>
+            </div>
+            <div onclick="openModal('pm')" class="group cursor-pointer p-1 rounded-[2rem] glass glow-hover transition-all duration-500 overflow-hidden">
+                <div class="p-8">
+                    <div class="bg-green-500/10 w-12 h-12 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 group-hover:text-accent transition-colors">Collaboration Hub</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">High-concurrency task orchestration system designed to handle teams of 500+ users simultaneously.</p>
+                    <div class="flex gap-2 flex-wrap">
+                        <span class="text-[10px] uppercase font-bold tracking-widest px-2 py-1 bg-white/5 rounded">Redis</span>
+                        <span class="text-[10px] uppercase font-bold tracking-widest px-2 py-1 bg-white/5 rounded">Docker</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="projectModal" class="fixed inset-0 z-[100] hidden bg-black/90 backdrop-blur-md flex items-center justify-center p-6">
+        <div class="bg-card w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-[2.5rem] border border-white/10 p-8 md:p-12 relative">
+            <button onclick="closeModal()" class="absolute top-8 right-8 text-gray-500 hover:text-white">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            <div id="modalContent"></div>
         </div>
     </div>
 
-    <section class="py-24 px-6 max-w-6xl mx-auto">
-        <div class="grid md:grid-cols-2 gap-16 items-center">
-            <div class="space-y-6 fade-in">
-                <span class="text-xs uppercase tracking-widest text-gray-500">Backend • SaaS • AI Systems</span>
-                <h2 class="text-4xl font-bold">About Me</h2>
-                <div class="space-y-4 text-xl text-gray-300">
-                    <p class="flex items-start gap-3"><span class="text-white">→</span> I build scalable SaaS systems with an AI edge.</p>
-                    <p class="flex items-start gap-3"><span class="text-white">→</span> Specialized in Laravel and system architecture.</p>
-                    <p class="flex items-start gap-3"><span class="text-white">→</span> Focused on clean, production-ready systems.</p>
-                    <p class="flex items-start gap-3"><span class="text-white">→</span> Exploring RAG and AI workflows.</p>
+    <section id="experience" class="py-24 max-w-4xl mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-16 text-center">Career <span class="text-accent">Trajectory</span></h2>
+        <div class="space-y-12 relative before:absolute before:left-0 md:before:left-1/2 before:w-px before:h-full before:bg-white/5">
+            <div class="relative pl-8 md:pl-0 md:w-1/2 md:pr-12 md:ml-0 ml-auto">
+                <div class="absolute left-[-5px] md:left-auto md:right-[-5px] top-0 w-3 h-3 rounded-full bg-accent"></div>
+                <div class="glass p-8 rounded-3xl">
+                    <span class="text-accent text-sm font-bold">Jul 2025 – Present</span>
+                    <h3 class="text-xl font-bold mt-2">Senior Software Engineer</h3>
+                    <p class="text-gray-500 mb-4">Dexian India Technologies</p>
+                    <ul class="text-sm text-gray-400 space-y-2 list-disc pl-4">
+                        <li>Enterprise integrations with AEM & Azure</li>
+                        <li>Migrated legacy crons to Docker & Rundeck</li>
+                        <li>Implemented Azure Key Vault for security</li>
+                    </ul>
                 </div>
             </div>
-            <div class="grid grid-cols-2 gap-4 fade-in">
-                <div class="p-8 glass rounded-2xl glow border-white/20 bg-white/[0.08]">
-                    <h3 class="text-3xl font-bold">4+</h3>
-                    <p class="text-xs text-gray-500 uppercase mt-2">Years Experience</p>
-                </div>
-                <div class="p-8 glass rounded-2xl">
-                    <h3 class="text-3xl font-bold">12+</h3>
-                    <p class="text-xs text-gray-500 uppercase mt-2">SaaS Built</p>
-                </div>
-                <div class="p-8 glass rounded-2xl">
-                    <h3 class="text-3xl font-bold">AI</h3>
-                    <p class="text-xs text-gray-500 uppercase mt-2">Specialist</p>
-                </div>
-                <div class="p-8 glass rounded-2xl">
-                    <h3 class="text-3xl font-bold">AWS</h3>
-                    <p class="text-xs text-gray-500 uppercase mt-2">Cloud Native</p>
+            <div class="relative pl-8 md:pl-12 md:w-1/2 md:ml-auto">
+                <div class="absolute left-[-5px] top-0 w-3 h-3 rounded-full bg-white/20"></div>
+                <div class="glass p-8 rounded-3xl">
+                    <span class="text-gray-500 text-sm font-bold">Jun 2024 – Jan 2025</span>
+                    <h3 class="text-xl font-bold mt-2">Software Engineer</h3>
+                    <p class="text-gray-500 mb-4">Collegevidya</p>
+                    <p class="text-sm text-gray-400">Developed REST APIs and optimized database performance using advanced indexing and query tuning for high-traffic student portals.</p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section class="py-24 px-6 bg-white/[0.02]">
-        <div class="max-w-6xl mx-auto">
-            <div class="mb-16 fade-in">
-                <h2 class="text-4xl font-bold mb-4">Core Expertise</h2>
-                <div class="h-1 w-20 bg-white"></div>
-            </div>
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="p-8 glass rounded-2xl border-white/20 glow bg-white/[0.05] fade-in">
-                    <h3 class="text-xl font-bold mb-6">AI & Systems</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-white/10 rounded-full text-sm">OpenAI API</span>
-                        <span class="px-3 py-1 bg-white/10 rounded-full text-sm">RAG Architecture</span>
-                        <span class="px-3 py-1 bg-white/10 rounded-full text-sm">Vector DBs</span>
-                        <span class="px-3 py-1 bg-white/10 rounded-full text-sm">Semantic Search</span>
-                    </div>
-                </div>
-                <div class="p-8 glass rounded-2xl fade-in">
-                    <h3 class="text-xl font-bold mb-6">Backend & Architecture</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-white/5 rounded-full text-sm">Laravel</span>
-                        <span class="px-3 py-1 bg-white/5 rounded-full text-sm">PHP 8.x</span>
-                        <span class="px-3 py-1 bg-white/5 rounded-full text-sm">Microservices</span>
-                        <span class="px-3 py-1 bg-white/5 rounded-full text-sm">REST/GraphQL</span>
-                    </div>
-                </div>
-                <div class="p-8 glass rounded-2xl fade-in">
-                    <h3 class="text-xl font-bold mb-6">DevOps & Cloud</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-white/5 rounded-full text-sm">AWS</span>
-                        <span class="px-3 py-1 bg-white/5 rounded-full text-sm">Docker</span>
-                        <span class="px-3 py-1 bg-white/5 rounded-full text-sm">CI/CD</span>
-                        <span class="px-3 py-1 bg-white/5 rounded-full text-sm">Redis</span>
-                    </div>
+             <div class="relative pl-8 md:pl-0 md:w-1/2 md:pr-12 md:ml-0 ml-auto">
+                <div class="absolute left-[-5px] md:left-auto md:right-[-5px] top-0 w-3 h-3 rounded-full bg-white/20"></div>
+                <div class="glass p-8 rounded-3xl">
+                    <span class="text-gray-500 text-sm font-bold">2022 – 2024</span>
+                    <h3 class="text-xl font-bold mt-2">Senior Software Engineer</h3>
+                    <p class="text-gray-500 mb-4">Sunstone</p>
+                    <p class="text-sm text-gray-400">Modernized 20+ Core PHP modules to Laravel. Reduced API latency by 30% via Redis and managed AWS (EC2/S3) infrastructure.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="py-24 px-6 max-w-6xl mx-auto">
-        <div class="mb-16 fade-in">
-            <h2 class="text-4xl font-bold mb-4">Selected Works</h2>
-            <p class="text-gray-500 uppercase tracking-widest text-xs">Production-Ready Solutions</p>
-        </div>
-        
-        <div class="grid gap-8">
-            <div class="group relative p-12 glass rounded-3xl border-white/20 glow transition-all duration-500 hover:-translate-y-2 fade-in">
-                <div class="flex flex-col md:flex-row justify-between gap-12">
-                    <div class="space-y-6 flex-1">
-                        <span class="px-4 py-1 bg-white text-black text-xs font-bold rounded-full uppercase">AI / SaaS</span>
-                        <h3 class="text-4xl font-bold">AI RAG Chatbot</h3>
-                        <p class="text-gray-400 text-lg leading-relaxed">
-                            A sophisticated AI-powered system designed to query extensive business documentations. Built using semantic search and vector embeddings to provide precise context-aware answers.
-                        </p>
-                        <p class="text-white font-semibold">🔥 Impact: Handles large document sets using semantic search with sub-second latency.</p>
-                        <div class="flex flex-wrap gap-3">
-                            <span class="text-xs text-gray-500 border border-white/10 px-3 py-1 rounded-full">Python</span>
-                            <span class="text-xs text-gray-500 border border-white/10 px-3 py-1 rounded-full">Pinecone</span>
-                            <span class="text-xs text-gray-500 border border-white/10 px-3 py-1 rounded-full">Laravel</span>
-                        </div>
-                        <a href="#" class="inline-block pt-4 text-white font-semibold border-b border-white hover:pb-1 transition-all">View Case Study →</a>
-                    </div>
-                    <div class="w-full md:w-1/3 bg-white/5 rounded-2xl h-64 md:h-auto overflow-hidden">
-                        <div class="w-full h-full bg-gradient-to-br from-gray-800 to-black flex items-center justify-center italic text-gray-600">
-                            [ System Architecture Visualization ]
-                        </div>
-                    </div>
-                </div>
+    <section class="py-24 bg-accent/5 border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-8 text-center">
+            <div>
+                <p class="text-gray-400 text-sm mb-2">Modernization</p>
+                <p class="font-bold text-lg">Legacy to Scalable</p>
             </div>
-
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="p-8 glass rounded-3xl transition-all duration-500 hover:-translate-y-2 hover:border-white/20 fade-in">
-                    <span class="text-xs text-gray-500 font-bold uppercase tracking-widest">SaaS</span>
-                    <h3 class="text-2xl font-bold mt-4 mb-3">Invoicing SaaS</h3>
-                    <p class="text-gray-400 mb-6 leading-relaxed">Automated invoicing platform with real-time tracking and multi-currency support.</p>
-                    <p class="text-sm text-white mb-6">🔥 Impact: Reduces manual errors and improves payment visibility by 40%.</p>
-                    <div class="flex flex-wrap gap-2 mb-8">
-                        <span class="text-[10px] bg-white/5 px-2 py-1 rounded-full">Laravel</span>
-                        <span class="text-[10px] bg-white/5 px-2 py-1 rounded-full">Stripe API</span>
-                    </div>
-                    <a href="#" class="text-white text-sm font-semibold">View Case Study →</a>
-                </div>
-
-                <div class="p-8 glass rounded-3xl transition-all duration-500 hover:-translate-y-2 hover:border-white/20 fade-in">
-                    <span class="text-xs text-gray-500 font-bold uppercase tracking-widest">SaaS</span>
-                    <h3 class="text-2xl font-bold mt-4 mb-3">Project Management Tool</h3>
-                    <p class="text-gray-400 mb-6 leading-relaxed">High-concurrency team collaboration system with real-time updates and task orchestration.</p>
-                    <p class="text-sm text-white mb-6">🔥 Impact: Improves workflow efficiency for teams of up to 500 members.</p>
-                    <div class="flex flex-wrap gap-2 mb-8">
-                        <span class="text-[10px] bg-white/5 px-2 py-1 rounded-full">React</span>
-                        <span class="text-[10px] bg-white/5 px-2 py-1 rounded-full">Redis</span>
-                    </div>
-                    <a href="#" class="text-white text-sm font-semibold">View Case Study →</a>
-                </div>
+            <div>
+                <p class="text-gray-400 text-sm mb-2">Infrastructure</p>
+                <p class="font-bold text-lg">Container-first Workflows</p>
+            </div>
+            <div>
+                <p class="text-gray-400 text-sm mb-2">Cloud Security</p>
+                <p class="font-bold text-lg">Azure Key Vault / ACR</p>
+            </div>
+            <div>
+                <p class="text-gray-400 text-sm mb-2">Efficiency</p>
+                <p class="font-bold text-lg">40% API Optimization</p>
             </div>
         </div>
     </section>
 
-    <section class="py-24 px-6 bg-white/[0.02]">
-        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-16">
-            <div class="fade-in">
-                <h2 class="text-4xl font-bold mb-4">Experience</h2>
-                <div class="mt-8">
-                    <p class="text-white font-bold">Tech Lead @ Dexian</p>
-                    <p class="text-gray-500 text-sm">2022 — Present</p>
-                    <p class="text-gray-400 mt-4 leading-relaxed">Leading backend development for enterprise-scale SaaS products and implementing AI-driven features.</p>
+    <footer id="contact" class="py-24 max-w-7xl mx-auto px-6">
+        <div class="glass rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-64 h-64 bg-accent/10 rounded-full blur-[100px]"></div>
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">Let’s build scalable <br> systems together.</h2>
+            <p class="text-gray-400 mb-10 max-w-xl mx-auto">Currently open to senior backend and lead opportunities. Reach out for consultations or collaborations.</p>
+            
+            <div class="flex flex-col md:flex-row items-center justify-center gap-6 mb-12">
+                <a href="mailto:anirbancodes@gmail.com" class="text-2xl font-semibold hover:text-accent transition-colors">anirbancodes@gmail.com</a>
+                <div class="hidden md:block w-2 h-2 rounded-full bg-white/10"></div>
+                <div class="flex gap-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">GitHub</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">LinkedIn</a>
                 </div>
             </div>
-            <div class="md:col-span-2 space-y-12 fade-in">
-                <p class="text-2xl text-gray-300 leading-relaxed italic">
-                    "I build high-performance systems where reliability and scalability are non-negotiable."
-                </p>
-                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
-                    <div>
-                        <h4 class="text-3xl font-bold">4+ Years</h4>
-                        <p class="text-xs text-gray-500 uppercase mt-2">Deep Tech Expertise</p>
-                    </div>
-                    <div>
-                        <h4 class="text-3xl font-bold">10+ APIs</h4>
-                        <p class="text-xs text-gray-500 uppercase mt-2">Public & Internal</p>
-                    </div>
-                    <div>
-                        <h4 class="text-3xl font-bold">100%</h4>
-                        <p class="text-xs text-gray-500 uppercase mt-2">Production Uptime</p>
-                    </div>
-                </div>
-                <ul class="space-y-4 text-gray-300">
-                    <li class="flex items-start gap-3">
-                        <span class="text-white">●</span> Architected core microservices handling 1M+ monthly requests.
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <span class="text-white">●</span> Integrated RAG-based AI workflows to automate customer support.
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <span class="text-white">●</span> Optimized AWS infrastructure, reducing cloud costs by 30%.
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
 
-    <section class="py-24 px-6 max-w-6xl mx-auto text-center">
-        <div class="mb-16 fade-in">
-            <span class="text-xs text-gray-500 uppercase tracking-widest">Engineering Principles</span>
-            <h2 class="text-4xl font-bold mt-4">How I Build Systems</h2>
+            <form class="max-w-md mx-auto grid gap-4">
+                <input type="email" placeholder="Your Email" class="bg-white/5 border border-white/10 rounded-xl px-6 py-4 focus:outline-none focus:border-accent transition-colors">
+                <button class="bg-white text-black font-bold py-4 rounded-xl hover:bg-gray-200 transition-all">Start a Conversation</button>
+            </form>
         </div>
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-            <div class="p-8 glass rounded-2xl fade-in"><p class="font-semibold">Clean Architecture</p></div>
-            <div class="p-8 glass rounded-2xl fade-in"><p class="font-semibold">Scalability First</p></div>
-            <div class="p-8 glass rounded-2xl fade-in"><p class="font-semibold">Modular Design</p></div>
-            <div class="p-8 glass rounded-2xl fade-in"><p class="font-semibold">Async Processing</p></div>
-            <div class="p-8 glass rounded-2xl fade-in"><p class="font-semibold">Production-First</p></div>
-            <div class="p-8 glass rounded-2xl fade-in"><p class="font-semibold">AI-First Thinking</p></div>
-        </div>
-    </section>
-
-    <section id="contact" class="py-24 px-6 max-w-4xl mx-auto text-center fade-in">
-        <div class="glass p-16 rounded-[3rem] border-white/20 glow">
-            <h2 class="text-4xl md:text-5xl font-bold mb-8">Let’s Build Something Together</h2>
-            <p class="text-gray-400 mb-12 text-lg">Currently open to new projects and leadership opportunities.</p>
-            <div class="flex flex-col md:flex-row gap-6 justify-center items-center">
-                <a href="mailto:anirbanbhowmick11@gmail.com class="px-8 py-4 bg-white text-black font-bold rounded-full w-full md:w-auto">Email Me</a>
-                <div class="flex gap-8">
-                    <a href="https://github.com/anirbancodes69" target="_blank" class="text-gray-400 hover:text-white transition-colors">GitHub</a>
-                    <a href="https://linkedin.com/in/anirban-bhowmick" target="_blank" class="text-gray-400 hover:text-white transition-colors">LinkedIn</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="py-12 text-center text-gray-600 text-xs tracking-widest uppercase">
-        © 2026 Anirban Bhowmick — Made with Focus.
+        <p class="text-center mt-20 text-gray-600 text-sm">© 2026 Anirban Bhowmick. Built with precision and Laravel in mind.</p>
     </footer>
-    <script src="script.js"></script>
+
+    <script>
+        const projectData = {
+            rag: {
+                title: "AI RAG Chatbot",
+                problem: "Traditional search was failing to provide contextually relevant answers from proprietary technical documentation, leading to developer friction.",
+                solution: "Engineered a Retrieval-Augmented Generation (RAG) pipeline to marry LLM reasoning with internal datasets.",
+                architecture: "Used vector embeddings for semantic indexing and a middleware layer to filter context before prompting the model.",
+                stack: "Python, FastAPI, Pinecone, OpenAI API, Docker",
+                outcomes: "Reduced 'time-to-answer' by 60% for internal support teams and achieved sub-second query latency."
+            },
+            saas: {
+                title: "Invoicing SaaS",
+                problem: "Enterprise clients struggled with fragmented billing cycles and manual payment reconciliation across multiple currencies.",
+                solution: "Built a centralized multi-tenant invoicing platform with automated ledger tracking and webhook-driven payment status updates.",
+                architecture: "Event-driven architecture utilizing Laravel Jobs and Redis for background processing and high-availability billing logs.",
+                stack: "Laravel, MySQL, Redis, Stripe SDK, AWS EC2",
+                outcomes: "Eliminated manual billing errors and improved cash flow visibility for over 50 enterprise accounts."
+            },
+            pm: {
+                title: "Project Management Tool",
+                problem: "Existing tools lacked the real-time orchestration needed for massive teams (500+), causing task collisions and state desync.",
+                solution: "Designed a high-concurrency collaboration engine with a focus on real-time task locking and state synchronization.",
+                architecture: "Implemented a Pub/Sub model via Redis to broadcast state changes across containerized app instances.",
+                stack: "PHP 8.x, Laravel, Redis, Docker Compose, Azure ACR",
+                outcomes: "Successfully scaled to support 500+ concurrent users with zero race conditions in task assignments."
+            }
+        };
+
+        function openModal(key) {
+            const data = projectData[key];
+            const content = `
+                <h3 class="text-3xl font-bold mb-8 text-white">${data.title}</h3>
+                <div class="grid md:grid-cols-2 gap-12 text-sm md:text-base">
+                    <div>
+                        <div class="mb-8">
+                            <h4 class="text-accent font-bold uppercase tracking-widest text-xs mb-3">The Problem</h4>
+                            <p class="text-gray-400 leading-relaxed">${data.problem}</p>
+                        </div>
+                        <div>
+                            <h4 class="text-accent font-bold uppercase tracking-widest text-xs mb-3">The Solution</h4>
+                            <p class="text-gray-400 leading-relaxed">${data.solution}</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="mb-8 p-6 glass rounded-2xl">
+                            <h4 class="text-white font-bold mb-3">Architecture Approach</h4>
+                            <p class="text-gray-400 text-sm">${data.architecture}</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-8">
+                            ${data.stack.split(', ').map(s => `<span class="px-3 py-1 bg-white/5 rounded-full text-xs text-gray-300 border border-white/5">${s}</span>`).join('')}
+                        </div>
+                        <div class="bg-blue-500/10 border border-blue-500/20 p-6 rounded-2xl">
+                            <h4 class="text-blue-400 font-bold mb-1">Impact</h4>
+                            <p class="text-blue-100 text-sm font-medium">${data.outcomes}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+            document.getElementById('modalContent').innerHTML = content;
+            document.getElementById('projectModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('projectModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal on outside click
+        window.onclick = function(event) {
+            const modal = document.getElementById('projectModal');
+            if (event.target == modal) closeModal();
+        }
+    </script>
 </body>
 </html>
